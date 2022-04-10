@@ -18,11 +18,16 @@ public class CustomerTest {
 		customerList.add(customerJeong);
 		customerList.add(customerJo);
 
-		customerList.forEach(customer -> {
-			customer.calcPrice(1000000);
-			System.out.println(customer.showCustomerInfo());
-		});
+//		customerList.forEach(customer -> {
+//			customer.calcPrice(1000000);
+//			System.out.println(customer.showCustomerInfo());
+//		});
 
+		// customerJeong의 클래스가 원래 GoldCustomer 클래스였는 지 확인.
+		if (customerJeong instanceof GoldCustomer) {
+			GoldCustomer vc = (GoldCustomer) customerJeong;
+			System.out.println(vc.showCustomerInfo());
+		}
 	}
 
 }
